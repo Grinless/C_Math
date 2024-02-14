@@ -5,10 +5,29 @@ namespace C_Math
 {
     public static class C_MathF
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public const double E = 2.7182818284590451D;
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public const double PI = 3.1415926535897931D;
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public const double Rad2Deg = 180F / PI;
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public const double Deg2Rad = PI / 180F;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float Cos(float value) => Mathf.Cos(value);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float Sin(float value) => Mathf.Sin(value);
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float Sec(float value) => 1 / Mathf.Cos(value);
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float Cot(float value) => Mathf.Cos(value) / Mathf.Sin(value);
 
         /// <summary>
         /// Limit a value to the passed maximum.
